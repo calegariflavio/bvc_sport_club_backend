@@ -1,10 +1,10 @@
 module.exports = class Registration {
-    constructor(id, fullName, address, status, fee) {      
+    constructor(memberID, memberFullName, memberAddress, memberStatus, fee) {      
         
-        this.id = id;
-        this. fullName = fullName;
-        this.address = address;
-        this.status =status;
+        this.memberID = memberID;
+        this.memberFullName = memberFullName;
+        this.memberAddress = memberAddress;
+        this.memberStatus = memberStatus;
         this.fee = fee;
         
     }
