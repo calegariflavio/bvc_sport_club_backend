@@ -2,16 +2,16 @@ const Registration = require('../models/registration');
 
 exports.register = (req, res) => {
     const data = req.body;
-    const fee = calculateFee(data.status);
-    const registration = new Registration(data.userID, data.fullName, data.address, data.status, fee);
+    const fee = calculateFee(data.memberStatus);
+    const registration = new Registration(data.memberID, data.memberFullName, data.memberAddress, data.memberStatus, fee);
     console.log(registration)
     res.json(registration); 
 };
 
-function calculateFee(status) {
-    if (status == 'student') {
+function calculateFee(memberStatus) {
+    if (memberStatus == 'student') {
       return 10; 
-    } else if (status == 'staff') {
+    } else if (memberStatus == 'staff') {
       return 50; 
     } else {
       return 0; 
